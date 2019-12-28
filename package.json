@@ -3,6 +3,7 @@
     "sync-db": "sync-db"
   },
   "dependencies": {
-    "@leapfrogtechnology/sync-db": "^1.0.0-alpha.8"
+    "@leapfrogtechnology/sync-db": "^1.0.0-alpha.8",
+    "mssql": "^6.0.1"
   }
 }
