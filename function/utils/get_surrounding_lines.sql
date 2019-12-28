@@ -22,10 +22,10 @@ BEGIN
 ');
 
   SELECT
-    @snippet = @snippet + CHAR(13) +
+    @snippet = @snippet + CHAR(13) + CAST(line_number AS VARCHAR(10)) +
       (
         CASE
-          WHEN @with_highlight = 1 AND line_number = @line_number THEN '--->'
+          WHEN @with_highlight = 1 AND line_number = @line_number THEN ' -->'
           ELSE '    '
         END
       ) + line_text
