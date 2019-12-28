@@ -4,7 +4,8 @@
 CREATE FUNCTION utils.get_surrounding_lines(
   @message NVARCHAR(MAX),
   @line_number INT,
-  @adjacent_line_count INT
+  @adjacent_line_count INT,
+  @with_highlight BIT = 1
 )
 RETURNS NVARCHAR(MAX)
 AS
@@ -21,8 +22,13 @@ BEGIN
 ');
 
   SELECT
-    @snippet = @snippet + N'
-' + line_text
+    @snippet = @snippet + CHAR(13) +
+      (
+        CASE
+          WHEN @with_highlight = 1 AND line_number = @line_number THEN '--->'
+          ELSE '    '
+        END
+      ) + line_text
   FROM @line_table
   WHERE line_number BETWEEN @line_number - @adjacent_line_count AND @line_number + @adjacent_line_count;
 

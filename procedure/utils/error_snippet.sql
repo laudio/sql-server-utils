@@ -17,7 +17,7 @@ BEGIN
 
   DECLARE @query NVARCHAR(MAX) = ( SELECT STRING_AGG(query, '') FROM @proc_text);
 
-  DECLARE @snippet NVARCHAR(MAX) = utils.get_surrounding_lines(@query, @line_number, @adjacent_line_count);
+  DECLARE @snippet NVARCHAR(MAX) = utils.get_surrounding_lines(@query, @line_number, @adjacent_line_count, 1);
 
   PRINT 'ERRORED QUERY SNIPPET:' + CHAR(13) + @snippet;
 
