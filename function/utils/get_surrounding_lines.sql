@@ -1,8 +1,8 @@
 --
--- Function to get surrounding lines from a message.
+-- Function to get surrounding lines from a text.
 --
 CREATE FUNCTION utils.get_surrounding_lines(
-  @message NVARCHAR(MAX),
+  @text NVARCHAR(MAX),
   @line_number INT,
   @adjacent_line_count INT,
   @with_highlight BIT = 1
@@ -17,8 +17,9 @@ BEGIN
     line_text NVARCHAR(MAX)
   );
 
+  -- TODO: Use inbuilt character for newline instead of using the literal character.
   INSERT INTO @line_table (line_text)
-  SELECT value FROM STRING_SPLIT(@message, N'
+  SELECT value FROM STRING_SPLIT(@text, N'
 ');
 
   SELECT
