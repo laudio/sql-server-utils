@@ -8,10 +8,8 @@ You can use the `utils.error_snippet` procedure as follows:
 
 ```sql
 BEGIN TRY
-
   -- Execute procedure with any possible error.
   EXEC proc_name 'arg1', 'arg2';
-
 END TRY
 BEGIN CATCH
   -- This procedure prints the errored snippet from given procedure.
