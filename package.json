@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "sync-db": "sync-db"
+  },
+  "dependencies": {
+    "@leapfrogtechnology/sync-db": "^1.0.0-alpha.8"
+  }
+}
