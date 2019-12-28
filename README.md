@@ -6,9 +6,9 @@ Microsoft SQL Server Database Utitilies
 
 ### Functions
 
-| SN  | NAME                                                                  | DESCRIPTION                                       |
-| --- | --------------------------------------------------------------------- | ------------------------------------------------- |
-| 1   | [utils.get_surrounding_lines](docs/function/get_surrounding_lines.md) | Function to get surrounding lines from a message. |
+| SN  | NAME                                                                  | DESCRIPTION                                    |
+| --- | --------------------------------------------------------------------- | ---------------------------------------------- |
+| 1   | [utils.get_surrounding_lines](docs/function/get_surrounding_lines.md) | Function to get surrounding lines from a text. |
 
 ### Procedures
 
