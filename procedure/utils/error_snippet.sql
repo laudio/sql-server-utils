@@ -20,6 +20,6 @@ BEGIN
 
   PRINT 'ERRORED QUERY SNIPPET:' + CHAR(13) + @snippet;
 
-  SELECT @SNIPPET;
+  SELECT @snippet;
 
 END
