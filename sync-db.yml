@@ -1,0 +1,6 @@
+basePath: .
+sql:
+  # Create objects in utils schema
+  - schema/utils.sql
+  - function/utils/get_surrounding_lines.sql
+  - procedure/utils/error_snippet.sql
