@@ -15,7 +15,7 @@ BEGIN
   INSERT INTO @proc_text (query)
   EXEC sp_helptext @proc_name;
 
-  DECLARE @query NVARCHAR(MAX) = ( SELECT STRING_AGG(query, '') FROM @proc_text);
+  DECLARE @query NVARCHAR(MAX) = (SELECT STRING_AGG(query, '') FROM @proc_text);
 
   DECLARE @snippet NVARCHAR(MAX) = utils.get_surrounding_lines(@query, @line_number, @adjacent_line_count, 1);
 
