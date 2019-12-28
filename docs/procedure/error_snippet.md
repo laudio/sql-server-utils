@@ -26,26 +26,15 @@ END CATCH
 Error snippet with the error line highlighted:
 
 ```bash
-
-      );
-
-      UPDATE [qa].[qa_result_fact_timesheet]
-      SET is_active=0
-      WHERE is_active=1;
-
-      INSERT INTO [qa].[qa_result_fact_timesheet]
-      (
-        qa_datetime,
-        last_timesheet_file,
---->    test_case,
-        qa_result,
-        impacted_records,
-        server_name,
-        client,
-        is_active
-      )
-      SELECT
-        GETDATE() AS qa_datetime,
-        @last_timesheet_file_name AS last_timesheet_file,
-        test_case,
+12
+13      UPDATE [qa].[qa_result_fact_timesheet]
+14      SET is_active=0
+15      WHERE is_active=1;
+16
+17 -->  INSERT INTO [qa].[qa_result_fact_timesheet]
+18      (
+19        qa_datetime,
+20        last_timesheet_file,
+21        test_case,
+22        qa_result,
 ```
