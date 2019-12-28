@@ -1,10 +1,10 @@
 # utils.get_surrounding_lines
 
-Function to get surrounding lines from a message.
+Function to get surrounding lines from a text.
 
 ## Usage of adjacent_line_count
 
-You can how many surrounding lines to show using the second to last `adjacent_line_count` argument.
+You can choose how many surrounding lines to show using the second to last `adjacent_line_count` argument.
 
 ```sql
 -- With `adjacent_line_count = 1`
@@ -16,13 +16,13 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 2, 1) AS snip
 
 ## Output of adjacent_line_count
 
-|        snippet1         |
-| ----------------------- |
-| there\n--->how\n    are |
+|                snippet1                |
+| -------------------------------------- |
+| 2    there<br />3 -->how<br />4    are |
 
-|               snippet2                |
-| ------------------------------------- |
-| Hey\nthere\n--->how\n    are\n    you |
+|                              snippet2                              |
+| ------------------------------------------------------------------ |
+| 1    Hey<br />2    there<br />3 -->how<br />4    are<br />5    you |
 
 ## Usage with highlight
 
@@ -34,9 +34,9 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 1, 1) AS snip
 
 ## Output with highlight
 
-|         snippet         |
-| ----------------------- |
-| there\n--->how\n    are |
+|                 snippet                 |
+| --------------------------------------- |
+| 2     there<br />3 -->how<br />4    are |
 
 ## Usage without highlight
 
@@ -48,6 +48,6 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 1, 0) AS snip
 
 ## Output without highlight
 
-|     snippet     |
-| --------------- |
-| there\nhow\nare |
+|                  snippet                  |
+| ----------------------------------------- |
+| 2     there<br />3     how<br />4     are |
