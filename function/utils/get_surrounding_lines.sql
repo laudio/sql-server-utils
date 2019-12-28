@@ -1,5 +1,5 @@
 --
--- Procedure to get surrounding lines from a message.
+-- Function to get surrounding lines from a message.
 --
 CREATE FUNCTION utils.get_surrounding_lines(
   @message NVARCHAR(MAX),
