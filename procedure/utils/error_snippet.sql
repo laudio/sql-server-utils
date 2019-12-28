@@ -3,7 +3,6 @@
 --
 CREATE PROCEDURE utils.error_snippet
   @proc_name NVARCHAR(255),
-  @line_number INT,
   @adjacent_line_count INT = 2
 AS
 BEGIN
@@ -17,7 +16,7 @@ BEGIN
 
   DECLARE @query NVARCHAR(MAX) = (SELECT STRING_AGG(query, '') FROM @proc_text);
 
-  DECLARE @snippet NVARCHAR(MAX) = utils.get_surrounding_lines(@query, @line_number, @adjacent_line_count, 1);
+  DECLARE @snippet NVARCHAR(MAX) = utils.get_surrounding_lines(@query, ERROR_LINE(), @adjacent_line_count, 1);
 
   PRINT 'ERRORED QUERY SNIPPET:' + CHAR(13) + @snippet;
 
