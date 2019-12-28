@@ -18,11 +18,11 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 2, 1) AS snip
 
 |                snippet1                |
 | -------------------------------------- |
-| 2    there<br />3 -->how<br />4    are |
+| 2    there\n3 -->how\n4    are |
 
 |                              snippet2                              |
 | ------------------------------------------------------------------ |
-| 1    Hey<br />2    there<br />3 -->how<br />4    are<br />5    you |
+| 1    Hey\n2    there\n3 -->how\n4    are\n5    you |
 
 ## Usage with highlight
 
@@ -36,7 +36,7 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 1, 1) AS snip
 
 |                 snippet                 |
 | --------------------------------------- |
-| 2     there<br />3 -->how<br />4    are |
+| 2     there\n3 -->how\n4    are |
 
 ## Usage without highlight
 
@@ -50,4 +50,4 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 1, 0) AS snip
 
 |                  snippet                  |
 | ----------------------------------------- |
-| 2     there<br />3     how<br />4     are |
+| 2     there\n3     how\n4     are |
