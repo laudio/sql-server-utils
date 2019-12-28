@@ -16,12 +16,12 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 2, 1) AS snip
 
 ## Output of adjacent_line_count
 
-|                snippet1                |
-| -------------------------------------- |
+|            snippet1            |
+| ------------------------------ |
 | 2    there\n3 -->how\n4    are |
 
-|                              snippet2                              |
-| ------------------------------------------------------------------ |
+|                      snippet2                      |
+| -------------------------------------------------- |
 | 1    Hey\n2    there\n3 -->how\n4    are\n5    you |
 
 ## Usage with highlight
@@ -34,8 +34,8 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 1, 1) AS snip
 
 ## Output with highlight
 
-|                 snippet                 |
-| --------------------------------------- |
+|             snippet             |
+| ------------------------------- |
 | 2     there\n3 -->how\n4    are |
 
 ## Usage without highlight
@@ -48,6 +48,6 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 1, 0) AS snip
 
 ## Output without highlight
 
-|                  snippet                  |
-| ----------------------------------------- |
+|              snippet              |
+| --------------------------------- |
 | 2     there\n3     how\n4     are |
