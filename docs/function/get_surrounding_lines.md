@@ -16,13 +16,13 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 2, 1) AS snip
 
 ## Output of adjacent_line_count
 
-|            snippet1            |
-| ------------------------------ |
-| 2    there\n3 -->how\n4    are |
+|                                      snippet1                                       |
+| ----------------------------------------------------------------------------------- |
+| 2&nbsp;&nbsp;&nbsp;&nbsp;there<br />3&nbsp;-->how<br />4&nbsp;&nbsp;&nbsp;&nbsp;are |
 
-|                      snippet2                      |
-| -------------------------------------------------- |
-| 1    Hey\n2    there\n3 -->how\n4    are\n5    you |
+|                                                                        snippet2                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1&nbsp;&nbsp;&nbsp;&nbsp;Hey<br />2&nbsp;&nbsp;&nbsp;&nbsp;there<br />3&nbsp;-->how<br />4&nbsp;&nbsp;&nbsp;&nbsp;are<br />5&nbsp;&nbsp;&nbsp;&nbsp;you |
 
 ## Usage with highlight
 
@@ -34,9 +34,9 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 1, 1) AS snip
 
 ## Output with highlight
 
-|             snippet             |
-| ------------------------------- |
-| 2     there\n3 -->how\n4    are |
+|                                          snippet                                          |
+| ----------------------------------------------------------------------------------------- |
+| 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;there<br />3&nbsp;-->how<br />4&nbsp;&nbsp;&nbsp;&nbsp;are |
 
 ## Usage without highlight
 
@@ -48,6 +48,6 @@ SELECT utils.get_surrounding_lines('Hey\nthere\nhow\nare\nyou', 3, 1, 0) AS snip
 
 ## Output without highlight
 
-|              snippet              |
-| --------------------------------- |
-| 2     there\n3     how\n4     are |
+|                                                       snippet                                                        |
+| -------------------------------------------------------------------------------------------------------------------- |
+| 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;there<br />3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;how<br />4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;are |
