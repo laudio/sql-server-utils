@@ -6,7 +6,6 @@ CREATE PROCEDURE utils.error_snippet
   @adjacent_line_count INT = 2
 AS
 BEGIN
-
   DECLARE @proc_text TABLE (
     query NVARCHAR(MAX)
   );
